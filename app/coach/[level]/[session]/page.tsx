@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getLevel, getSession, DRILL_VIDEOS } from "@/lib/curriculum";
+import { getLevel, getSession, DRILL_VIDEOS, DRILL_DESCRIPTIONS } from "@/lib/curriculum";
 import Link from "next/link";
 
 const levelColors: Record<string, string> = {
@@ -175,10 +175,11 @@ export default function SessionPage({ params }: { params: { level: string; sessi
                 {section.drills.map((drill, j) => {
                   const drillName = cleanDrillName(drill);
                   const videoUrl = DRILL_VIDEOS[drillName];
+                  const description = !videoUrl ? DRILL_DESCRIPTIONS[drillName] : undefined;
                   return (
                     <div key={j} style={{
                       display: "flex",
-                      alignItems: "center",
+                      alignItems: "flex-start",
                       gap: "var(--space-3)",
                       padding: "var(--space-2) 0",
                       borderBottom: j < section.drills.length - 1 ? "1px solid var(--ea-line)" : "none",
@@ -188,13 +189,24 @@ export default function SessionPage({ params }: { params: { level: string; sessi
                         background: `${accent}22`,
                         color: accent, fontSize: 12, fontWeight: "var(--fw-bold)",
                         display: "flex", alignItems: "center", justifyContent: "center",
-                        flexShrink: 0,
+                        flexShrink: 0, marginTop: description ? 2 : 0,
                       }}>
                         {j + 1}
                       </div>
-                      <span style={{ fontSize: "var(--fs-body-sm)", color: "var(--ea-ink)", lineHeight: 1.5, flex: 1 }}>
-                        {drillName}
-                      </span>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <span style={{ fontSize: "var(--fs-body-sm)", color: "var(--ea-ink)", lineHeight: 1.5 }}>
+                          {drillName}
+                        </span>
+                        {description && (
+                          <div style={{
+                            fontSize: 12, color: "var(--ea-slate)",
+                            lineHeight: 1.5, marginTop: 2,
+                            fontStyle: "italic",
+                          }}>
+                            {description}
+                          </div>
+                        )}
+                      </div>
                       {videoUrl && (
                         <a
                           href={videoUrl}
@@ -209,6 +221,7 @@ export default function SessionPage({ params }: { params: { level: string; sessi
                             textDecoration: "none", flexShrink: 0,
                             fontFamily: "var(--font-body)",
                             letterSpacing: "0.03em",
+                            marginTop: 2,
                           }}
                         >
                           ▶ YouTube

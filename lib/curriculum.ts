@@ -1108,6 +1108,369 @@ export function getAllLevels(): Level[] {
 // Sources: eabadminton.com curriculum pages
 // ─────────────────────────────────────────
 
+// ─────────────────────────────────────────
+// DRILL DESCRIPTIONS
+// Short how-to notes for drills without a YouTube video
+// ─────────────────────────────────────────
+
+export const DRILL_DESCRIPTIONS: Record<string, string> = {
+  // ── LEARN TO TRAIN — Session 1 ──
+  "Shuttle Balance Challenge":
+    "Balance a shuttlecock flat on the strings while walking or doing simple footwork. First to drop theirs does 5 jumping jacks.",
+  "Mirror Movement Game":
+    "Partners face each other 2 m apart. One leads footwork movements; the other mirrors exactly. Swap leader every 30 s.",
+  "Cooperative Shuttle Rally (10 hits!)":
+    "Partners aim to keep the shuttle in play for 10 consecutive hits. Count aloud together and celebrate the target.",
+  "Court Zones: Net, Mid, Rear":
+    "Coach walks players through the three court zones and explains which shots belong in each zone. Players jog to the zone called.",
+  "Singles vs Doubles Court Lines":
+    "Walk the court together, taping or calling out which lines are live for singles vs. doubles in both serve and rally.",
+  "Call-Your-Zone Movement Game":
+    "Coach calls a zone name (Net / Mid / Rear); players sprint to that zone, hit ready position, and hold until the next call.",
+
+  // ── LEARN TO TRAIN — Session 2 ──
+  "Chasse Step Practice":
+    "Side-to-side chasse step (step-together-step) across the full court width. Stay low, keep feet parallel, and repeat back the other way.",
+  "Return to Centre After Every Shot":
+    "After each feed, player hits the shuttle then immediately recovers to the centre base mark before the next feed arrives.",
+  "Base Position Quiz (coach calls zone)":
+    "Coach calls a zone at random; player moves there, holds ready position for 2 s, then recovers to base. Gradually speed up.",
+  "Footwork + Recover Combo":
+    "Player moves to a cone, simulates a swing, then split-steps back to base. Run all 6 corners in sequence.",
+
+  // ── LEARN TO TRAIN — Session 3 ──
+  "Hand-Eye Coordination Feeder Drill":
+    "Feeder tosses shuttle by hand to various heights and sides; player tracks it and catches it on the strings (no swing). Builds racket awareness.",
+  "Toss & Hit Introduction":
+    "Partner tosses the shuttle gently underhand from 2 m away; player hits it back with a basic forehand push. Focus on contact point.",
+  "Overhead Forehand Push (short)":
+    "Feeder throws high; player reaches overhead and pushes the shuttle just over the net with a short stroke. No power — control only.",
+  "Hit the Hoop (target accuracy game)":
+    "Place hula hoops in different court zones. Players aim their shots to land inside a hoop. 1 point per hoop hit; rotate hoops each round.",
+  "Over-the-Net Lift Challenge":
+    "Stand at the net tape. Lift the shuttle from below-net height, clearing the tape and landing it in the rear court. 10 reps each.",
+  "Partner Feed & Catch Rally":
+    "One player feeds with an underhand hand-toss; the other hits it back. Feeder catches the return by hand and resets. Keeps pace high.",
+
+  // ── LEARN TO TRAIN — Session 4 ──
+  "Serve Consistency: 10-in-a-Row Challenge":
+    "Serve 10 times in a row to the correct service box without a fault. Restart the count from zero if one lands out or in the net.",
+  "Serve to Target Zones":
+    "Mark three target zones with cones (wide, body, backhand). Call the zone before each serve; aim to land there 3 of 5 attempts.",
+  "Serve from Both Courts (right & left)":
+    "Alternate serving from the right-hand box and left-hand box so players experience both angles. 5 serves each side.",
+  "Reading the Server's Stance":
+    "Returner watches the server's body angle and racket face before impact to guess the direction. Server varies; returner calls the zone.",
+
+  // ── LEARN TO TRAIN — Session 5 ──
+  "Net Tap Rally":
+    "Two players stand close to the same side of the net and tap the shuttle softly back and forth just above the tape. Goal: 20 taps.",
+  "Clear then Net Push Combo":
+    "Feeder lifts high; player clears deep. Feeder immediately lifts again; player rushes forward and pushes to net. Repeat.",
+  "Two-Shot Pattern (feed & respond)":
+    "Coach feeds two shots in a preset sequence (e.g., rear then net). Player responds with the matching strokes and recovers to base.",
+  "Stroke Decision Game (coach points, player hits)":
+    "Coach points to a zone without speaking; player chooses and executes the correct stroke for that zone (clear, drop, or net).",
+
+  // ── LEARN TO TRAIN — Session 6 ──
+  "Clear-to-Clear Cooperative Rally":
+    "Both players hit high, deep clears to each other's baseline cooperatively. Count consecutive clears as a team; beat the record.",
+  "Cross-Court Rally Drill":
+    "Players rally cross-court diagonally, keeping the shuttle in the diagonal half of the court. Focus on footwork and placement.",
+  "Target Zone Rally (land in the box!)":
+    "Cones mark a 1 m × 1 m target box in each rear corner. Both players aim to land shots inside the box. 1 point per clean landing.",
+  "5-Shot Rally Pattern":
+    "A predetermined 5-shot sequence (e.g., clear-clear-drop-net-lift). Both players learn the pattern and run it cooperatively.",
+  "Mini-Court Singles (half court)":
+    "Play singles using only half the court width. Reduces movement demand so beginners can focus on shot quality.",
+  "First to 11 Match Play":
+    "Standard singles game to 11 points with proper scoring. Coach watches for technique learned in the session.",
+  "Team Record: Most Hits in a Row":
+    "Whole group tries to beat their cooperative rally record. Every player takes turns; drop = restart. Build teamwork and focus.",
+  "Serve-and-Rally Combo Challenge":
+    "Player must serve correctly first; then the point is live. A fault or bad serve means the point doesn't count.",
+  "No-Smash Rally Game":
+    "Match play where smashing is banned. Forces clears, drops, and net shots — rewarding tactical play over power.",
+
+  // ── LEARN TO TRAIN — Session 7 ──
+  "Doubles Court Lines Explained":
+    "Coach explains which lines are live for doubles serves (narrow long box) vs. doubles rallies (full width + long). Walk the lines together.",
+  "Calling 'Mine!' Communication Drill":
+    "Both partners stand near a central shuttle. On coach's signal, the first to call 'Mine!' clearly takes the shot. Builds vocal habits.",
+  "Partner Feed & Rally":
+    "Doubles pairs take turns hand-feeding and rallying cooperatively. No scoring — focus on covering your half of the court.",
+  "Two-vs-One Feeding Drill":
+    "One feeder hand-feeds to two players on the other side. Both must communicate, cover the court, and not collide.",
+  "Cross-Court Doubles Rally":
+    "Doubles rally along the diagonal. Player at net controls the front two-thirds; back player covers the rear. Rotate every 5 shots.",
+  "Doubles Serve Rules (short court)":
+    "Walk through and drill the doubles short-service box rule. Practice serving legally from both right and left courts.",
+  "First to 11 Doubles Game":
+    "Standard doubles game to 11 with proper service rotation. Coach officiates and calls faults.",
+
+  // ── LEARN TO TRAIN — Session 8 ──
+  "Footwork Relay Race":
+    "Teams race through a 6-cone footwork course. First team to complete all turns wins. Fun and fast.",
+  "Serve Accuracy Tournament":
+    "Round-robin competition: 5 serves per player per round, 1 point per zone hit. Highest score after all rounds wins.",
+  "Clear & Net Push Review":
+    "Feeder alternates lifting and netting; player alternates clearing and pushing. Review session — no new content.",
+  "Round-Robin Mini Singles":
+    "Short 5-point games; rotate opponents after each. Everyone plays everyone in the group.",
+  "Team Doubles Challenge":
+    "Team-format doubles competition with rotating partners. Focus on communication and fun.",
+  "Trick Shot Show-Off Contest":
+    "Open fun round: each player attempts one creative or trick shot. Group votes on the best. No pressure.",
+  "10-Clear Consistency Test":
+    "Assessment: hit 10 clears in a row that land behind the singles service line. Record the best run from 3 attempts.",
+  "Serve to Target Zone (3 of 5)":
+    "Assessment: serve 5 times to a marked target zone; must land 3 of 5 inside. Coach records the result.",
+  "Coach Feedback & Goal Setting for Level 2":
+    "One-on-one review with the coach. Player receives written feedback on Level 1 skills and sets 2 personal goals for Level 2.",
+
+  // ── TRAIN TO TRAIN — Session 1 ──
+  "Crossover Step to Back Court":
+    "From base position, drive off the non-racket foot and use a crossover step to reach the rear corner. Simulate the shot and recover.",
+  "Jump & Recover Drill":
+    "Jump to touch an overhead cone or hand, land in balance, immediately split-step and recover to base. 10 reps per set.",
+  "Line Sprint Footwork":
+    "Sprint to the front service line, touch, return to base; sprint to mid-court, touch, return; sprint to baseline, touch, return. Timed.",
+  "T-Pattern Agility Drill":
+    "Sprint forward to a cone, shuffle left, shuffle right, back-pedal to start. Repeat; aim to beat your best time.",
+  "Reaction Ladder Drill":
+    "Coach points randomly to one of 6 corners; player moves there as fast as possible, touches, returns to base. 20 reps.",
+  "30-Second Burst Footwork":
+    "Maximum-effort 6-corner shadow footwork for 30 seconds. Count how many full cycles are completed; record and try to beat it.",
+  "Rest Ratio Training (work:rest 2:1)":
+    "30 s of hard shadow footwork, then 15 s rest. Repeat 6–8 rounds. Mimics the work-rest ratio of a real singles rally.",
+
+  // ── TRAIN TO TRAIN — Session 2 ──
+  "Feeder Smash Repetitions (10 in a row)":
+    "Feeder lifts high to the backhand rear corner; player smashes 10 in a row. Feeder corrects if the landing zone is wrong.",
+  "Smash from Rear Court":
+    "Feeder lifts high to the back boundary line. Player must reach the shuttle at full depth and smash downward. 3 sets of 8.",
+
+  // ── TRAIN TO TRAIN — Session 3 ──
+  "Clear vs Drop Shot Decision":
+    "Feeder lifts; coach shows a coloured card (e.g., red = clear, blue = drop). Player reads the card and executes that shot.",
+  "Overhead Stroke Footwork Combo":
+    "Combine the overhead stroke technique with the correct approach footwork. Feeder lifts; player uses full footwork pattern to smash or clear.",
+
+  // ── TRAIN TO TRAIN — Session 4 ──
+  "Serve at Deuce (simulate pressure)":
+    "Score is called as 20-all before every serve. Player must serve correctly under the mental pressure of match-deciding points.",
+  "Serve & Third Shot Pattern":
+    "Serve short → opponent pushes → player attacks the return. Drill the 3-shot sequence: serve, return, attack.",
+  "Mixed Serve Sequence (vary each rep)":
+    "Player varies the serve type (low, flick, high) on each rep. Coach calls which serve after the player steps to the line.",
+
+  // ── TRAIN TO TRAIN — Session 5 ──
+  "Net-to-Net Consistency Challenge":
+    "Both players hit cross-net pushes continuously, keeping the shuttle tumbling just over the tape. Target: 15 in a row.",
+  "Lift-and-Intercept Pattern":
+    "Player lifts, moves forward to net; partner clears or drops; player intercepts at mid-court. Rotate roles every 5 shots.",
+  "Half-Court Net vs Rear Game":
+    "Conditioned game: one player is limited to the front half (net player), the other plays from the rear. Switch roles mid-game.",
+
+  // ── TRAIN TO TRAIN — Session 6 ──
+  "3-Shot Feeding Pattern":
+    "Coach feeds 3 balls in a fixed sequence (e.g., rear-left, net, rear-right). Player responds and recovers after each. Repeat 10 sets.",
+  "Serve & Attack Pattern":
+    "Player serves short, feeder pushes the return, player attacks it. Drill the opening 3-shot sequence to build automatic habits.",
+  "Conditioned Game: Smash Only":
+    "Points can only be won with a smash landing in the court. Forces players to build attack opportunities before finishing.",
+  "Singles Match Play (score to 15)":
+    "Full singles game to 15 points with proper scoring and service rotation. No conditions applied.",
+  "5-Shot Pattern at Increased Speed":
+    "Run a 5-shot set pattern, but the feeder speeds up the pace every 2 rounds until the player can no longer maintain shape.",
+  "Coach Disrupts Pattern — Respond":
+    "Start a known 5-shot pattern; mid-rally the coach breaks the pattern with an unexpected feed. Player must adapt and respond.",
+  "Pattern from Both Sides of Court":
+    "Run the same 5-shot pattern from the forehand side, then repeat from the backhand side. Builds symmetrical muscle memory.",
+
+  // ── TRAIN TO TRAIN — Session 7 ──
+  "Drive or Lift Decision Drill":
+    "Coach feeds a mid-court shuttle at varying heights. Player decides in real time: if above net height → drive; if below → lift.",
+  "Random Feed — Drive or Drop Response":
+    "Coach randomly feeds either a drive-height or drop-height ball without telegraphing. Player reads and responds with the correct shot.",
+
+  // ── TRAIN TO TRAIN — Session 8 ──
+  "Attack from Rear, Defend from Mid":
+    "Conditioned game: attacker must stay behind the back service line; defender must stay between the service lines. Forces tactical discipline.",
+  "Using the Full Court Width":
+    "Drill rule: every shot must land within 30 cm of a sideline. Forces players to stretch opponents wide.",
+  "Exploit Backhand Corner Consistently":
+    "Every attacking shot in the drill must be aimed at the opponent's backhand rear corner. Builds tactical habit.",
+  "Win the Net — Dominate the Game":
+    "Conditioned drill: extra point awarded if you win the rally from a net position. Incentivises moving forward.",
+  "Zone-Restricted Match (coach sets rules)":
+    "Coach assigns each player a zone they must return to after every shot. Changes tactically each round.",
+  "No-Lift Game (forces attacking play)":
+    "Lifting is banned. Players must drive, drop, or smash every shot. Forces an attacking mindset.",
+  "Score from 10-10 — Pressure Points":
+    "Every game starts at 10-10 so every point is pressure. Trains serving, returning, and shot selection at the sharp end.",
+  "Smash Accuracy: 8 of 10 in Zone":
+    "Assessment: smash 10 feeds to a marked target zone (e.g., a cone area near the sideline). Must land 8 of 10 to pass.",
+  "Low Serve Consistency: 8 of 10":
+    "Assessment: serve 10 times from one box; shuttle must clear the net and land in the correct service box. 8 of 10 to pass.",
+  "Coach Review & Level 3 Goal Setting":
+    "Coach-led debrief reviewing Level 2 performance. Player receives written feedback and sets 2 measurable goals for Level 3.",
+
+  // ── TRAIN TO COMPETE — Session 1 ──
+  "Court Coverage Speed Test":
+    "Timed test: coach feeds to all 6 corners in a fixed sequence. Player hits and recovers. Record time; aim to improve each session.",
+  "20-Shot Footwork Sequence":
+    "20-feed multi-shuttle at match pace. Player focuses on recovering after every shot, not just chasing the shuttle.",
+  "Recovery Sprint — Baseline to Net":
+    "Sprint from the baseline to the net, touch the net tape, back-pedal to baseline. 10 reps. Rest 30 s between sets.",
+
+  // ── TRAIN TO COMPETE — Session 2 ──
+  "Drop to Weak Side Repeatedly":
+    "Feeder lifts; player drops every single shot to the same predetermined weak-side corner. Builds precision and habit.",
+  "Force the Lift with Drop Shot":
+    "Conditioned game: player scores a point only by forcing the opponent to lift. Teaches how to use the drop shot as a setup.",
+
+  // ── TRAIN TO COMPETE — Session 4 ──
+  "Intercept at Mid-Court":
+    "Partner drives cross-court; player steps forward from the base to intercept the shuttle at mid-court with a block or push.",
+
+  // ── TRAIN TO COMPETE — Session 5 ──
+  "Side-Out Defense Drill":
+    "Coach smashes to the wide sideline. Player must reach it with a lunging footwork step, block it safely, and recover.",
+  "Recover to Base Position":
+    "After each defensive shot, player must visibly return to base before the feeder sends the next shuttle. Builds discipline.",
+
+  // ── TRAIN TO COMPETE — Session 6 ──
+  "Shot Selection Under Pressure":
+    "High-tempo multi-feed from various heights and positions. Player must choose the correct shot type in under 0.5 s.",
+  "Conditioned Match: Win with Drop Shots":
+    "Match play where points count double if won with a drop shot. Forces players to build the pattern to set up the drop.",
+  "Exploit Opponent Weaknesses":
+    "Before the drill, coach identifies one weakness (e.g., backhand, slow recovery). Player must target that weakness every rally.",
+  "Score-Based Pressure Drill":
+    "Every game starts at 18-18 so every shot is match-deciding. Player serves and returns; rotate pairings every 3 points.",
+  "Serve Pattern vs Right-Handed Opponent":
+    "Drill a specific serve sequence designed to exploit a right-hander's backhand (e.g., wide to left box, then body). 20 reps.",
+  "Serve Pattern vs Left-Handed Opponent":
+    "Mirror of the above: serve to the left-hander's backhand (wide to right box). 20 reps with focus on consistency.",
+
+  // ── TRAIN TO COMPETE — Session 7 ──
+  "Baseline-to-Net Sprint x10":
+    "Sprint from baseline to net, touch the net tape with your racket, recover to baseline. 10 reps; record total time.",
+  "Side-to-Side Touchlines x10":
+    "Lateral sprints touching each singles sideline. Start centre; touch left, return, touch right = 1 rep. 10 reps.",
+  "3-Corner Repeat Sprint Drill":
+    "Sprint to front-left cone, recover to base, sprint to front-right cone, recover, sprint to back-centre. Repeat 5 times.",
+  "Match-Length Simulation Rally":
+    "Cooperative rally at moderate pace for 20–25 minutes — the length of a real match. Focus on breathing and staying relaxed.",
+  "Work-Rest Ratio Training":
+    "Alternate 30 s of intense shadow footwork with 15 s rest for 20 minutes. Matches the work-rest ratio of competitive play.",
+
+  // ── TRAIN TO COMPETE — Session 8 ──
+  "Round-Robin Singles Tournament":
+    "All players compete in a full round-robin bracket. Short games to 7. Coach tracks results and discusses tactics after.",
+  "Best of 3 Games Match Play":
+    "Full best-of-3-games match (to 21, 2 pts clear) with proper scoring, service rotation, and side changes.",
+  "Doubles Rotation Format":
+    "Doubles matches where partners rotate after each game. Everyone experiences playing with and against different partners.",
+  "Adjust Tactics Between Games":
+    "Players must identify one thing to change between games, tell their partner or coach, and execute it in the next game.",
+  "Exploit Score Momentum (12+ point runs)":
+    "During matches, players identify when they're on a run of 3+ points and consciously keep the pressure up.",
+  "Win the First Point of Each Game":
+    "Focus drill: both players go all-out on the very first rally of each game. Teaches the importance of a strong start.",
+  "Jump Smash Accuracy Test":
+    "Assessment: jump smash 10 feeds to a target zone. Count how many land in the zone; 7 of 10 to pass Level 3.",
+  "Drop Shot to Corner: 8 of 10":
+    "Assessment: drop shot to the near corner from the rear court 10 times. Must land 8 of 10 within the target area.",
+  "Coach Debrief & Level 4 Goals":
+    "Individual review of Level 3 performance. Coach gives written feedback; player sets 2 goals for the elite Train to Win stage.",
+
+  // ── TRAIN TO WIN — Session 2 ──
+  "Serve & Attack Pattern — Singles":
+    "Serve short → feeder pushes → player attacks. Practise the full 3-shot setup sequence until the attack becomes automatic.",
+  "Clear to Rearcourt & Follow":
+    "Player clears deep, immediately moves to the central base position, and anticipates the next shot. Builds positioning habit.",
+  "Control the T-Position":
+    "Conditioned drill: extra point awarded for winning a rally while standing on the centre T. Trains positional discipline.",
+  "Force Backhand Corner Every Rally":
+    "Every shot in the drill must target the opponent's backhand rear corner. Builds the habit of using the highest-percentage target.",
+  "Build Points Through Patience":
+    "Conditioned match: player must play at least 6 shots before attempting a winner. Teaches point construction.",
+
+  // ── TRAIN TO WIN — Session 3 ──
+  "Communication & Calling Shots":
+    "Doubles drill: every player must verbally call every shot they intend to play. No silent shots allowed.",
+
+  // ── TRAIN TO WIN — Session 4 ──
+  "Video Review: Spot the Patterns":
+    "Watch a short recorded match clip together. Coach pauses at key moments; players call out the pattern being set up.",
+  "Feeder Deception — Respond Correctly":
+    "Feeder shows a clear fake motion (e.g., smash preparation) then plays a real drop. Player must read the cue and respond correctly.",
+
+  // ── TRAIN TO WIN — Session 5 ──
+  "Pressure Point Management (17-18 drill)":
+    "All games start at 17-18 so every shot is within 4 points of the end. Trains decision-making and composure under maximum pressure.",
+  "Comeback Strategy from 0-10 Down":
+    "Game starts 0-10. The trailing player must adjust tactics, stay composed, and fight back. Focus on process, not the score.",
+  "Serve at Match Point Challenge":
+    "Player serves 10 times as if it's match point (they're serving to win). Coach calls the score before each serve.",
+  "High-Pressure Rally Drill":
+    "Normal rally — but coach randomly announces 'match point' mid-rally. Player must stay composed and not change their game.",
+  "Play Every Point Like It's 19-19":
+    "Conditioning cue: every single rally in practice is treated as if the score is 19-19. No mental let-up.",
+  "Lose First Game — Win Match Simulation":
+    "Player intentionally concedes game 1, then must win games 2 and 3. Builds resilience and tactical adaptation.",
+  "Handling Umpire Calls & Staying Composed":
+    "Coach randomly makes controversial calls mid-rally. Player must accept the call, breathe, and reset without losing focus.",
+
+  // ── TRAIN TO WIN — Session 6 ──
+  "Scouting & Game Plan Preparation":
+    "Watch footage or receive coach notes on an upcoming opponent. Write a 1-page game plan: serve targets, shot priorities, weaknesses.",
+  "Set Play: Serve Patterns vs Known Opponents":
+    "Prepare 3 specific serve patterns based on the opponent's known tendencies. Drill each pattern 10 times.",
+  "Post-Match Recovery & Review":
+    "Immediately after every match: 5-min cool-down, rehydrate, then write 3 things to improve before the next match.",
+  "Physical Periodization Overview":
+    "Coach explains how to plan training load (volume and intensity) across a full competitive season. Players map their own season.",
+  "Technical Goals for the Season":
+    "Set 3 measurable technical goals (e.g., 'backhand clear consistency: 8 of 10') with a target date for each.",
+  "Morning-of-Tournament Checklist":
+    "Review the standard pre-competition checklist: gear packed, warm-up plan, nutrition timing, mindset cues.",
+  "Between-Match Recovery Protocol":
+    "After each match: rehydrate (500 ml), eat a light carb snack, light stretch for 5 min, sit quietly for 10 min.",
+  "Match Journaling & Self-Coaching":
+    "Write 1 page after every match: what worked, what to improve, and one thing to focus on in the next match.",
+
+  // ── TRAIN TO WIN — Session 7 ──
+  "Confidence Cue Words (personalized)":
+    "Each player identifies 1-2 personal power words (e.g., 'sharp', 'trust') to repeat silently before serving under pressure.",
+  "Activation Level Adjustment (calm vs pump up)":
+    "Practice regulating pre-match intensity: use deep breathing + slow movement to calm down, or music + fast footwork to pump up.",
+  "Opponent-Neutral Mindset Practice":
+    "Coach rotates opponents every 3 points without warning. Player must play the same tactical game regardless of who's across the net.",
+  "Error Flush — Move On Drill":
+    "After every error in drilling, player immediately claps hands once, says 'next', and is ready before the next feed.",
+  "Stay in the Process (not the score)":
+    "Conditioned match: players are not told the score by the coach. They must focus purely on execution, not the scoreboard.",
+  "3 Things I Did Well":
+    "At the end of each session, write 3 specific things executed well (technique, footwork, decision). Read them before next session.",
+  "1 Tactical Adjustment for Next Match":
+    "Write exactly one tactical change to make in the next match. Be specific (e.g., 'serve wider to the forehand box').",
+  "Physical & Mental Recovery Routine":
+    "Post-session: 10-min stretch, hydrate fully, then disconnect from badminton for at least 1 hour. No reviewing rallies.",
+
+  // ── TRAIN TO WIN — Session 8 ──
+  "Video Analysis Session (self-review)":
+    "Record yourself during practice or a match. Watch it back alone and identify 2 technique or tactical cues to fix.",
+  "Full Match vs Coach/Senior Player":
+    "Play a full competitive-pace match against the coach or a senior player. Focus on applying everything from Level 4.",
+  "Skills Assessment: All 4 Level Benchmarks":
+    "Complete all four Level benchmark tests in one session: 10-clear test, serve accuracy, smash accuracy, drop shot accuracy.",
+  "Goal Setting for Competitive Season":
+    "Set 3 process goals (what you'll do), 2 performance goals (measurable results), and 1 outcome goal (event placement).",
+};
+
 export const DRILL_VIDEOS: Record<string, string> = {
   // ── LEARN TO TRAIN — Session 1: Welcome to Badminton ──
   "Reaction, Footwork & Fun Warm-Up Game":
