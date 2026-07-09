@@ -1,0 +1,137 @@
+/* EA Hoops — Global Styles */
+/* Fonts */
+@font-face {
+  font-family: "BBH Bogle";
+  src: url("/fonts/BBHBogle-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inclusive Sans";
+  src: url("/fonts/InclusiveSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inclusive Sans";
+  src: url("/fonts/InclusiveSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* EA Brand Kit tokens */
+:root {
+  --ea-sky: #46AFE3;
+  --ea-sky-light: #9FE0FF;
+  --ea-sky-soft: #D0F5FF;
+  --ea-blue: #0092DB;
+  --ea-link: #007ABA;
+  --ea-teal-700: #006F8D;
+  --ea-teal-800: #005F79;
+  --ea-teal-900: #004356;
+  --ea-navy: #10414F;
+  --ea-ink: #1E526E;
+  --ea-slate: #47636B;
+  --ea-peach: #FFBB91;
+  --ea-orange: #FFBC78;
+  --ea-orange-dark: #D36D36;
+  --ea-orange-hot: #F55D1B;
+  --ea-white: #FFFFFF;
+  --ea-mist: #F2F2F2;
+  --ea-line: #E5E5E5;
+  --ea-muted: #787878;
+  --ea-success: #2FA36B;
+  --ea-success-bg: #E3F6EC;
+  --ea-danger: #D6603B;
+  --ea-danger-bg: #FBE9E2;
+
+  --text-display: var(--ea-navy);
+  --text-heading: var(--ea-navy);
+  --text-body: var(--ea-ink);
+  --text-muted: var(--ea-slate);
+  --text-on-dark: var(--ea-white);
+
+  --surface-page: var(--ea-white);
+  --surface-card: var(--ea-white);
+  --surface-dark: var(--ea-teal-900);
+  --surface-wash: var(--ea-mist);
+
+  --action-primary: var(--ea-orange-hot);
+  --action-primary-hover: #D94F10;
+  --action-on-primary: var(--ea-white);
+
+  --border-card: var(--ea-line);
+
+  --font-display: "BBH Bogle", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Inclusive Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-display-xl: 80px;
+  --fs-display-lg: 64px;
+  --fs-display-md: 48px;
+  --fs-display-sm: 36px;
+  --fs-display-xs: 24px;
+  --fs-body-lg: 20px;
+  --fs-body-md: 18px;
+  --fs-body: 16px;
+  --fs-body-sm: 15px;
+  --fs-label: 14px;
+
+  --lh-display: 1.0;
+  --lh-tight: 1.15;
+  --lh-body: 1.5;
+  --ls-display: 0.04em;
+  --ls-body: -0.01em;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-button: 8px;
+  --radius-card: 0px;
+  --radius-badge: 4px;
+  --radius-input: 6px;
+
+  --shadow-card: 0 1px 4px rgba(16,65,79,0.06);
+  --shadow-card-hover: 0 4px 16px rgba(16,65,79,0.10);
+  --shadow-pop: 0 8px 24px rgba(16,65,79,0.14);
+
+  --nav-height: 64px;
+  --container-max: 900px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+  color: var(--text-body);
+  background: var(--ea-mist);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Basketball brand: use orange/peach accent instead of pickleball blue */
+.hoops-accent { color: var(--ea-orange-hot); }
+.hoops-bg { background: var(--ea-orange-hot); }
+
+/* Nav hiding on mobile */
+.coach-nav-name { display: inline; }
+.coach-nav-brand-text { display: inline; }
+@media (max-width: 520px) {
+  .coach-nav-name { display: none; }
+  .coach-nav-brand-text { display: none; }
+}
