@@ -1109,77 +1109,381 @@ export function getAllLevels(): Level[] {
 // ─────────────────────────────────────────
 
 export const DRILL_VIDEOS: Record<string, string> = {
-  // ── LEARN TO TRAIN ──
+  // ── LEARN TO TRAIN — Session 1: Welcome to Badminton ──
   "Reaction, Footwork & Fun Warm-Up Game":
     "https://www.youtube.com/watch?v=ttJmTx6FgZA",
+  "The Forehand Grip":
+    "https://www.youtube.com/watch?v=B1Co-S4-wRs",
+  "The Backhand Grip":
+    "https://www.youtube.com/watch?v=weNAgCeN7to",
+  "Ready Position Stance":
+    "https://www.youtube.com/watch?v=wV5GbMZBWFI",
+  "Split Step Timing":
+    "https://www.youtube.com/watch?v=29k4EE3jcFY",
+
+  // ── LEARN TO TRAIN — Session 2: Footwork Foundations ──
   "6-Corner Footwork for Kids":
     "https://www.youtube.com/watch?v=YV9cY07pPpQ",
+  "Forward & Backward Court Coverage":
+    "https://www.youtube.com/watch?v=NhNEEcLPjpc",
+  "Side-to-Side Shuffle":
+    "https://www.youtube.com/watch?v=NhNEEcLPjpc",
   "Step by Step Footwork Training":
     "https://www.youtube.com/watch?v=FWmtifOslF0",
+  "Shadow Badminton (no shuttle)":
+    "https://www.youtube.com/watch?v=JldE-PrdB9M",
+  "Cone Touch Footwork Drill":
+    "https://www.youtube.com/watch?v=Us683cbCDO8",
+
+  // ── LEARN TO TRAIN — Session 3: Basic Training Drills ──
   "Beginners Footwork, Drills & Tips":
     "https://www.youtube.com/watch?v=sDXWaMsYJck",
-  "How to Serve in Badminton":
-    "https://www.youtube.com/watch?v=KnivAevDPzA",
   "Beginners Badminton Coaching Tips & Tricks":
     "https://www.youtube.com/watch?v=kpHzIzSMF1s",
+  "Underhand Forehand Lift":
+    "https://www.youtube.com/watch?v=in24YZmG9ys",
+  "Backhand Push at Net":
+    "https://www.youtube.com/watch?v=9phTRu_CRZ0",
 
-  // ── TRAIN TO TRAIN ──
+  // ── LEARN TO TRAIN — Session 4: Learning the Serve ──
+  "How to Serve in Badminton":
+    "https://www.youtube.com/watch?v=KnivAevDPzA",
+  "Long High Serve (deep to back court)":
+    "https://www.youtube.com/watch?v=KRXCjhTI648",
+  "Short Low Serve (just over the net)":
+    "https://www.youtube.com/watch?v=O4X0LL7t2ys",
+  "Serve & Return Rally":
+    "https://www.youtube.com/watch?v=_N13YfFsNJM",
+  "Return to Baseline Lift":
+    "https://www.youtube.com/watch?v=cqkPgW_BsVw",
+  "Short Return to Net":
+    "https://www.youtube.com/watch?v=kLCCdLv_6Eo",
+
+  // ── LEARN TO TRAIN — Session 5: Basic Stroke Technique ──
+  "Forehand Overhead Clear":
+    "https://www.youtube.com/watch?v=S2brZPqx288",
+  "Clear to Baseline Consistency":
+    "https://www.youtube.com/watch?v=kS7WRUoD2fo",
+  "Drop & Hit Feeder Drill":
+    "https://www.youtube.com/watch?v=3k4Wt3fo_gc",
+  "Net Push — Forehand":
+    "https://www.youtube.com/watch?v=X6XfiO1D0ZI",
+  "Net Push — Backhand":
+    "https://www.youtube.com/watch?v=X6XfiO1D0ZI",
+  "Net Lift (Underarm Clear)":
+    "https://www.youtube.com/watch?v=yRLtypZzJ1E",
+
+  // ── LEARN TO TRAIN — Session 7: Doubles Basics ──
+  "Who Covers What? Positioning Overview":
+    "https://www.youtube.com/watch?v=W_mgrR9VNwo",
+  "Side-by-Side Starting Formation":
+    "https://www.youtube.com/watch?v=Dw1twWmIJdw",
+  "Rotation After Serve Practice":
+    "https://www.youtube.com/watch?v=iXxVLRg6DYQ",
+
+  // ── TRAIN TO TRAIN — Session 1: Six-Corner Footwork ──
   "6 Corner Footwork Training":
     "https://www.youtube.com/watch?v=hAD4qe9DtwU",
   "Footwork Speed Training":
     "https://www.youtube.com/watch?v=4daR0haJ1F8",
+  "Shadow Badminton x3 Rounds":
+    "https://www.youtube.com/watch?v=Us683cbCDO8",
+
+  // ── TRAIN TO TRAIN — Session 2: Smash Mechanics ──
   "How to Improve Your Badminton Smash":
     "https://www.youtube.com/watch?v=OMyQaFio_sc",
-  "Basic Badminton Stroke Training":
-    "https://www.youtube.com/watch?v=ypS1v42Ia_Y",
   "How to Swing & Smash":
     "https://www.youtube.com/watch?v=dp0eDShC8wc",
-  "Perfect Badminton Low Serve Every Time":
-    "https://www.youtube.com/watch?v=O4X0LL7t2ys",
+  "Smash Power Development (racket speed)":
+    "https://www.youtube.com/watch?v=DoT4tu79zy4",
+  "Smash Accuracy Targeting":
+    "https://www.youtube.com/watch?v=faG2NWIVM18",
+  "Jump Smash Introduction":
+    "https://www.youtube.com/watch?v=Seony5Owsb8",
+  "Smash Down-the-Line":
+    "https://www.youtube.com/watch?v=H7kpZ9inc10",
+  "Smash Cross-Court":
+    "https://www.youtube.com/watch?v=z8i5tKI0xys",
+  "Smash to Body (centre target)":
+    "https://www.youtube.com/watch?v=H7kpZ9inc10",
+
+  // ── TRAIN TO TRAIN — Session 3: Overhead & Clear Strokes ──
+  "Basic Badminton Stroke Training":
+    "https://www.youtube.com/watch?v=ypS1v42Ia_Y",
   "Forehand Overhead Clear Mechanics":
     "https://www.youtube.com/watch?v=S2brZPqx288",
+  "Backhand Clear Introduction":
+    "https://www.youtube.com/watch?v=hAKoUoLnxxw",
+  "Clear-Clear-Clear Consistency Drill":
+    "https://www.youtube.com/watch?v=kS7WRUoD2fo",
+  "Backhand Grip Switch Drill":
+    "https://www.youtube.com/watch?v=DhXTGwXVzZM",
+  "Backhand Clear 10-in-a-Row":
+    "https://www.youtube.com/watch?v=jCKx70__4ec",
+  "Backhand Overhead from Rear Corner":
+    "https://www.youtube.com/watch?v=GqHK8-wKcLo",
+
+  // ── TRAIN TO TRAIN — Session 4: Service Mastery ──
+  "Perfect Badminton Low Serve Every Time":
+    "https://www.youtube.com/watch?v=O4X0LL7t2ys",
+  "Flick Serve Timing & Deception":
+    "https://www.youtube.com/watch?v=IMF1FIfGDbQ",
+  "High Serve to Deep Corners":
+    "https://www.youtube.com/watch?v=KRXCjhTI648",
+  "Service Variation Practice":
+    "https://www.youtube.com/watch?v=AKXaZZ3DDd4",
+  "Return Low Serve — Push":
+    "https://www.youtube.com/watch?v=cqkPgW_BsVw",
+  "Return Low Serve — Lift":
+    "https://www.youtube.com/watch?v=7YqowmDwA60",
+  "Attack the Flick Serve":
+    "https://www.youtube.com/watch?v=wbjlCuBK6mo",
+
+  // ── TRAIN TO TRAIN — Session 5: Net Play Skills ──
+  "Net Kill Technique":
+    "https://www.youtube.com/watch?v=BIZ6PJ8z5Uo",
+  "Cross-Net Push (forehand & backhand)":
+    "https://www.youtube.com/watch?v=X6XfiO1D0ZI",
+  "Net Lift to Rear Court":
+    "https://www.youtube.com/watch?v=yRLtypZzJ1E",
+  "Tumbling Net Shot":
+    "https://www.youtube.com/watch?v=ZeXJHQiecC4",
+  "Net Shot Feeder Drill":
+    "https://www.youtube.com/watch?v=3k4Wt3fo_gc",
+  "Spinnet vs Flat Net Shot Decision":
+    "https://www.youtube.com/watch?v=SIvjcLx1KCk",
+  "Net Kill then Cover":
+    "https://www.youtube.com/watch?v=gIynLyyY0zU",
+
+  // ── TRAIN TO TRAIN — Session 6: Pattern Play ──
+  "Clear – Drop – Net Shot Pattern":
+    "https://www.youtube.com/watch?v=9-SBw-tSGkg",
+  "Smash – Net Kill Combination":
+    "https://www.youtube.com/watch?v=FVICtBO_VEQ",
+
+  // ── TRAIN TO TRAIN — Session 7: Drive & Fast Exchanges ──
   "Forehand Drive — Flat & Fast":
     "https://www.youtube.com/watch?v=HJe2bFqv0GY",
+  "Backhand Drive Mechanics":
+    "https://www.youtube.com/watch?v=5PiqHLyl5xw",
+  "Drive Exchange Drill (side-to-side)":
+    "https://www.youtube.com/watch?v=SoXecwpUKnE",
+  "Mid-Court Drive Battle":
+    "https://www.youtube.com/watch?v=SoXecwpUKnE",
+  "Multi-Shuttle Speed Feed":
+    "https://www.youtube.com/watch?v=77UUFrQJpss",
+  "Drive-Kill Combination":
+    "https://www.youtube.com/watch?v=VICxkR6BijI",
+  "Fast Exchange — 30 Seconds On":
+    "https://www.youtube.com/watch?v=77UUFrQJpss",
+  "Block & Counter the Drive":
+    "https://www.youtube.com/watch?v=ATMRbZ5Tu6A",
 
-  // ── TRAIN TO COMPETE ──
+  // ── TRAIN TO COMPETE — Session 1: Explosive Footwork ──
   "7 Advanced Tips for Faster Footwork":
     "https://www.youtube.com/watch?v=K-4a3RuI-18",
   "3-Minute Faster Footwork Workout":
     "https://www.youtube.com/watch?v=OAhcYkmbqOo",
-  "Drop Shots You Need to Use":
-    "https://www.youtube.com/watch?v=CC0FGFSarhQ",
-  "5 Drills to Hit the Perfect Badminton Smash":
-    "https://www.youtube.com/watch?v=vGD-VU0sAc8",
-  "Aggressive Attacking at the Net — Doubles":
-    "https://www.youtube.com/watch?v=AXZQNPfvLr4",
   "Fast to the Back Court":
     "https://www.youtube.com/watch?v=aMXpe97vQ7U",
   "Long Step Footwork Drill — Back to Front":
     "https://www.youtube.com/watch?v=IJg_1U_rFuo",
+  "Split Step to Explosive First Move":
+    "https://www.youtube.com/watch?v=QQwyI8IkHrQ",
+  "Reaction & Recovery Ladder":
+    "https://www.youtube.com/watch?v=LAPdm4AZySc",
+  "Ghost Drill at Match Intensity":
+    "https://www.youtube.com/watch?v=KCh4UhfcFNI",
+
+  // ── TRAIN TO COMPETE — Session 2: Drop Shot Mastery ──
+  "Drop Shots You Need to Use":
+    "https://www.youtube.com/watch?v=CC0FGFSarhQ",
   "5 Drills to Hit the Perfect Drop Shot":
     "https://www.youtube.com/watch?v=dkX1aGk8Tow",
+  "Fast Drop vs Slice Drop Decision":
+    "https://www.youtube.com/watch?v=K32fSOgKcaY",
+  "Deceptive Drop from Same Motion":
+    "https://www.youtube.com/watch?v=dvr3wm9SQNI",
+  "Drop to Corner — 20 in a Row":
+    "https://www.youtube.com/watch?v=rx1EbicT584",
+  "Drop & Follow to Net":
+    "https://www.youtube.com/watch?v=Ddrk5uzpbOw",
+  "Drop Shot Under Pressure Drill":
+    "https://www.youtube.com/watch?v=rx1EbicT584",
+  "Clear-Clear-Drop Pattern":
+    "https://www.youtube.com/watch?v=kS7WRUoD2fo",
+
+  // ── TRAIN TO COMPETE — Session 3: Advanced Smash & Power ──
+  "5 Drills to Hit the Perfect Badminton Smash":
+    "https://www.youtube.com/watch?v=vGD-VU0sAc8",
   "Jump Smash Footwork & Timing":
     "https://www.youtube.com/watch?v=5x3QnB5WB3E",
+  "Half Smash for Deception":
+    "https://www.youtube.com/watch?v=Aad87D7U7R8",
+  "Smash-Net Kill Combination":
+    "https://www.youtube.com/watch?v=FVICtBO_VEQ",
+  "Cross-Court Smash":
+    "https://www.youtube.com/watch?v=z8i5tKI0xys",
+  "Body Smash (into opponent)":
+    "https://www.youtube.com/watch?v=H7kpZ9inc10",
+  "Smash to Wide Forehand Side":
+    "https://www.youtube.com/watch?v=ym25rpRogKY",
+  "Jump Smash Approach Steps":
+    "https://www.youtube.com/watch?v=JzNEqZcNbk4",
+  "Jump Smash Landing & Recovery":
+    "https://www.youtube.com/watch?v=Seony5Owsb8",
+  "Jump Smash Repetition: 15 Reps":
+    "https://www.youtube.com/watch?v=gDlhGptgzyM",
+
+  // ── TRAIN TO COMPETE — Session 4: Attacking Front Court ──
+  "Aggressive Attacking at the Net — Doubles":
+    "https://www.youtube.com/watch?v=AXZQNPfvLr4",
+  "Net Kill: Forehand & Backhand":
+    "https://www.youtube.com/watch?v=OJEhnjyC_zY",
+  "Push & Re-Attack Pattern":
+    "https://www.youtube.com/watch?v=FVICtBO_VEQ",
+  "Front Court Pressure Drill":
+    "https://www.youtube.com/watch?v=X1_u-GQUgQg",
+  "Fake Push — Real Lift":
+    "https://www.youtube.com/watch?v=j6U4vQoMin4",
+  "Crossnet Disguise Drill":
+    "https://www.youtube.com/watch?v=osFWRFKk88E",
+  "Net Tumble vs Flat Shot Decision":
+    "https://www.youtube.com/watch?v=ZeXJHQiecC4",
+
+  // ── TRAIN TO COMPETE — Session 5: Defense & Recovery ──
+  "Low Defensive Body Position":
+    "https://www.youtube.com/watch?v=BQfXztjZcIA",
   "Block Return of Smash":
     "https://www.youtube.com/watch?v=OORHVgr3Os4",
+  "Defensive Lift — High & Deep":
+    "https://www.youtube.com/watch?v=Z_g35vSKdFI",
+  "Smash Defense — Paired Drill":
+    "https://www.youtube.com/watch?v=EXBqYDTaRRE",
+  "Defense into Counter-Attack":
+    "https://www.youtube.com/watch?v=ATMRbZ5Tu6A",
+  "Block-Lift-Counter Sequence":
+    "https://www.youtube.com/watch?v=ATMRbZ5Tu6A",
+  "Defend 10 Smashes in a Row":
+    "https://www.youtube.com/watch?v=2UqbX6aOFN0",
+  "Switch from Defense to Attack":
+    "https://www.youtube.com/watch?v=4eFt3wpA-R0",
 
-  // ── TRAIN TO WIN ──
+  // ── TRAIN TO COMPETE — Session 6: Pre-Competition Tactics ──
+  "Structured Match Warm-Up Routine":
+    "https://www.youtube.com/watch?v=OrvAMerIaug",
+  "Serving Strategy — Vary Your Serve":
+    "https://www.youtube.com/watch?v=AKXaZZ3DDd4",
+  "Build a Pre-Match Routine":
+    "https://www.youtube.com/watch?v=L2kkSt2Q8oQ",
+
+  // ── TRAIN TO COMPETE — Session 7: Fitness & Conditioning ──
+  "20-Shot Multi-Shuttle Conditioning":
+    "https://www.youtube.com/watch?v=77UUFrQJpss",
+  "Continuous Shadow Badminton 3 min":
+    "https://www.youtube.com/watch?v=8OuNdFyQe5s",
+  "Lunge Series (court specific)":
+    "https://www.youtube.com/watch?v=gLhCo8GHnig",
+  "Wrist & Forearm Strength Circuit":
+    "https://www.youtube.com/watch?v=cLqwZzseTq4",
+  "Jump Training for Smash Power":
+    "https://www.youtube.com/watch?v=Y3cwWyavgus",
+
+  // ── TRAIN TO WIN — Session 1: Advanced Techniques ──
   "7 Advanced Tips for Badminton Mastery":
     "https://www.youtube.com/watch?v=DxoPYeNIFYE",
+  "Deception & Slice Technique":
+    "https://www.youtube.com/watch?v=UZ5PkZLHiEI",
+  "Racket Speed & Wrist Snap Drill":
+    "https://www.youtube.com/watch?v=dSOX4osERrE",
+  "Delayed Stroke Deception":
+    "https://www.youtube.com/watch?v=j6U4vQoMin4",
+  "Shadow Play with Full Deception":
+    "https://www.youtube.com/watch?v=Us683cbCDO8",
+  "Multi-Shuttle Pressure Drill (speed)":
+    "https://www.youtube.com/watch?v=yaG0LzEcZpw",
+  "Slice Clear Disguised as Drop":
+    "https://www.youtube.com/watch?v=Aad87D7U7R8",
+  "Reverse Slice Net Shot":
+    "https://www.youtube.com/watch?v=EzFwPgNE2EQ",
+  "Wrist-Only Drill for Touch Shots":
+    "https://www.youtube.com/watch?v=zCq36gnqGdI",
+
+  // ── TRAIN TO WIN — Session 2: Singles Strategy ──
   "7 Advanced Badminton Singles Strategies":
     "https://www.youtube.com/watch?v=_tnssQY673Q",
-  "3 Doubles Tactics Everyone Should Use":
-    "https://www.youtube.com/watch?v=u-zK0MYLqTo",
   "How to Handle an Attacking Clear":
     "https://www.youtube.com/watch?v=aWDx3YDK-NE",
   "Win More Matches with This Easy Shot":
     "https://www.youtube.com/watch?v=xzYqI5LD5Wg",
   "Win Matches Even When You're Slow":
     "https://www.youtube.com/watch?v=x0gfglQ2b38",
-  "How to Read the Game in Badminton":
-    "https://www.youtube.com/watch?v=rCUhSdtRZF8",
   "Dominating with the Drop Shot in Singles":
     "https://www.youtube.com/watch?v=CC0FGFSarhQ",
-  "Deception & Slice Technique":
-    "https://www.youtube.com/watch?v=UZ5PkZLHiEI",
+
+  // ── TRAIN TO WIN — Session 3: Doubles Tactics ──
+  "3 Doubles Tactics Everyone Should Use":
+    "https://www.youtube.com/watch?v=u-zK0MYLqTo",
+  "Front-Back Attacking Formation":
+    "https://www.youtube.com/watch?v=W_mgrR9VNwo",
+  "Side-by-Side Defensive System":
+    "https://www.youtube.com/watch?v=701uhoUY5fY",
+  "Rotation Patterns in Doubles":
+    "https://www.youtube.com/watch?v=iXxVLRg6DYQ",
+  "2v1 Attack Drill":
+    "https://www.youtube.com/watch?v=Wi5j8PCjpzY",
+  "Serve & Net Rush Pattern":
+    "https://www.youtube.com/watch?v=4e43Zyy4R_0",
+  "Front-Back Role Responsibilities":
+    "https://www.youtube.com/watch?v=Dw1twWmIJdw",
+  "Switch Formation Under Attack":
+    "https://www.youtube.com/watch?v=4e43Zyy4R_0",
+  "Net Domination as Front Player":
+    "https://www.youtube.com/watch?v=gIynLyyY0zU",
+
+  // ── TRAIN TO WIN — Session 4: Reading the Game ──
+  "How to Read the Game in Badminton":
+    "https://www.youtube.com/watch?v=rCUhSdtRZF8",
+  "Anticipating Your Opponent's Shot":
+    "https://www.youtube.com/watch?v=x13pHLR2wXg",
+  "Pattern Recognition in Rallies":
+    "https://www.youtube.com/watch?v=s_7ZkRBsZas",
+  "Watching the Racket Face":
+    "https://www.youtube.com/watch?v=NLxp_3MWytc",
+  "Ghost Drill — React to Caller":
+    "https://www.youtube.com/watch?v=KCh4UhfcFNI",
+  "Identify Fake vs Real Shot":
+    "https://www.youtube.com/watch?v=nCdsaIjJUoU",
+  "Early Cue Reading Drill":
+    "https://www.youtube.com/watch?v=RkoqVyVlU7E",
+
+  // ── TRAIN TO WIN — Session 5: Winning Under Pressure ──
+  "Visualization Routine Pre-Match":
+    "https://www.youtube.com/watch?v=R3AIA62Q0F8",
+  "Breathing & Reset Between Points":
+    "https://www.youtube.com/watch?v=gxBQ_HwdgN4",
+
+  // ── TRAIN TO WIN — Session 6: Championship Preparation ──
+  "Full Match Warm-Up Protocol":
+    "https://www.youtube.com/watch?v=OrvAMerIaug",
+
+  // ── TRAIN TO WIN — Session 7: Mental Performance ──
+  "Build a Pre-Match Visualization Script":
+    "https://www.youtube.com/watch?v=oa6o2LkcR5k",
+  "Between-Point Reset Routine":
+    "https://www.youtube.com/watch?v=PFBMyWDa-Pw",
+
+  // ── TRAIN TO WIN — Session 8: Elite Training Methods ──
+  "Elite Warm-Up Protocol (active, sport-specific)":
+    "https://www.youtube.com/watch?v=ie2RHr9bF4w",
+  "Full-Court Multi-Shuttle Conditioning":
+    "https://www.youtube.com/watch?v=yaG0LzEcZpw",
+  "Plyometric Training for Court Speed":
+    "https://www.youtube.com/watch?v=Y3cwWyavgus",
+  "Strength-to-Power Transfer Drills":
+    "https://www.youtube.com/watch?v=msX4T_VcwCI",
+  "High-Repetition Technical Drilling (100 reps)":
+    "https://www.youtube.com/watch?v=JP11vn1IVcc",
+  "Pressure Feed at Elite Pace":
+    "https://www.youtube.com/watch?v=yaG0LzEcZpw",
 };
