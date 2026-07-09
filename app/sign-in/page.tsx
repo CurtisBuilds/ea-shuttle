@@ -8,19 +8,10 @@ export default function SignInPage() {
     alignItems: "center",
     justifyContent: "center",
     padding: "var(--space-5)",
-    background: "var(--ea-teal-900)",
-  };
-  const logo: React.CSSProperties = {
-    fontFamily: "var(--font-display)",
-    fontSize: "var(--fs-display-sm)",
-    color: "var(--ea-white)",
-    textTransform: "uppercase",
-    letterSpacing: "var(--ls-display)",
-    marginBottom: "var(--space-2)",
-    textAlign: "center",
+    background: "var(--ea-sky-soft)",
   };
   const sub: React.CSSProperties = {
-    color: "var(--ea-orange)",
+    color: "var(--ea-teal-700)",
     fontSize: "var(--fs-label)",
     fontFamily: "var(--font-body)",
     textTransform: "uppercase",
@@ -35,8 +26,9 @@ export default function SignInPage() {
 
   return (
     <div style={page}>
-      <div style={logo}>EA Hoops</div>
-      <div style={sub}>Jr Basketball Coach Curriculum</div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/bdmtn-logo.svg" alt="Elevation Athletics" style={{ height: 90, width: "auto", marginBottom: "var(--space-2)" }} />
+      <div style={sub}>Jr Badminton Coach Curriculum</div>
       <div style={card}>
         <SignIn />
       </div>
