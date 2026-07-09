@@ -1,5 +1,5 @@
 // EA Junior Badminton Instructional Curriculum
-// 4 Levels × 6 Sessions each
+// 4 Levels × 8 Sessions each
 // Videos sourced from eabadminton.com + curated YouTube content
 
 export type Section = {
@@ -54,6 +54,14 @@ const LEVELS: Level[] = [
               "Split Step Timing",
             ],
           },
+          {
+            heading: "Court Awareness",
+            drills: [
+              "Court Zones: Net, Mid, Rear",
+              "Singles vs Doubles Court Lines",
+              "Call-Your-Zone Movement Game",
+            ],
+          },
         ],
       },
       {
@@ -76,6 +84,14 @@ const LEVELS: Level[] = [
               "Step by Step Footwork Training",
               "Shadow Badminton (no shuttle)",
               "Cone Touch Footwork Drill",
+            ],
+          },
+          {
+            heading: "Recovery & Base",
+            drills: [
+              "Return to Centre After Every Shot",
+              "Base Position Quiz (coach calls zone)",
+              "Footwork + Recover Combo",
             ],
           },
         ],
@@ -102,6 +118,14 @@ const LEVELS: Level[] = [
               "Backhand Push at Net",
             ],
           },
+          {
+            heading: "Stroke Challenges",
+            drills: [
+              "Hit the Hoop (target accuracy game)",
+              "Over-the-Net Lift Challenge",
+              "Partner Feed & Catch Rally",
+            ],
+          },
         ],
       },
       {
@@ -123,6 +147,15 @@ const LEVELS: Level[] = [
             drills: [
               "Serve to Target Zones",
               "Serve & Return Rally",
+              "Serve from Both Courts (right & left)",
+            ],
+          },
+          {
+            heading: "Receiving the Serve",
+            drills: [
+              "Reading the Server's Stance",
+              "Return to Baseline Lift",
+              "Short Return to Net",
             ],
           },
         ],
@@ -149,6 +182,14 @@ const LEVELS: Level[] = [
               "Net Tap Rally",
             ],
           },
+          {
+            heading: "Combining Strokes",
+            drills: [
+              "Clear then Net Push Combo",
+              "Two-Shot Pattern (feed & respond)",
+              "Stroke Decision Game (coach points, player hits)",
+            ],
+          },
         ],
       },
       {
@@ -170,6 +211,77 @@ const LEVELS: Level[] = [
             drills: [
               "Mini-Court Singles (half court)",
               "First to 11 Match Play",
+            ],
+          },
+          {
+            heading: "Cooperative Challenges",
+            drills: [
+              "Team Record: Most Hits in a Row",
+              "Serve-and-Rally Combo Challenge",
+              "No-Smash Rally Game",
+            ],
+          },
+        ],
+      },
+      {
+        id: 7,
+        title: "Doubles Basics",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-learn-to-train/",
+        sections: [
+          {
+            heading: "Doubles Court & Rules",
+            drills: [
+              "Doubles Court Lines Explained",
+              "Who Covers What? Positioning Overview",
+              "Calling 'Mine!' Communication Drill",
+              "Side-by-Side Starting Formation",
+            ],
+          },
+          {
+            heading: "Partner Drills",
+            drills: [
+              "Partner Feed & Rally",
+              "Two-vs-One Feeding Drill",
+              "Cross-Court Doubles Rally",
+            ],
+          },
+          {
+            heading: "Doubles Mini-Match",
+            drills: [
+              "Doubles Serve Rules (short court)",
+              "First to 11 Doubles Game",
+              "Rotation After Serve Practice",
+            ],
+          },
+        ],
+      },
+      {
+        id: 8,
+        title: "Rally Games & Celebration",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-learn-to-train/",
+        sections: [
+          {
+            heading: "Skill Review",
+            drills: [
+              "Footwork Relay Race",
+              "Serve Accuracy Tournament",
+              "Clear & Net Push Review",
+            ],
+          },
+          {
+            heading: "Fun Tournament",
+            drills: [
+              "Round-Robin Mini Singles",
+              "Team Doubles Challenge",
+              "Trick Shot Show-Off Contest",
+            ],
+          },
+          {
+            heading: "Level 1 Assessment",
+            drills: [
+              "10-Clear Consistency Test",
+              "Serve to Target Zone (3 of 5)",
+              "Coach Feedback & Goal Setting for Level 2",
             ],
           },
         ],
@@ -208,6 +320,14 @@ const LEVELS: Level[] = [
               "Reaction Ladder Drill",
             ],
           },
+          {
+            heading: "Footwork Under Fatigue",
+            drills: [
+              "30-Second Burst Footwork",
+              "Shadow Badminton x3 Rounds",
+              "Rest Ratio Training (work:rest 2:1)",
+            ],
+          },
         ],
       },
       {
@@ -232,6 +352,14 @@ const LEVELS: Level[] = [
               "Jump Smash Introduction",
             ],
           },
+          {
+            heading: "Smash Direction",
+            drills: [
+              "Smash Down-the-Line",
+              "Smash Cross-Court",
+              "Smash to Body (centre target)",
+            ],
+          },
         ],
       },
       {
@@ -253,6 +381,14 @@ const LEVELS: Level[] = [
             drills: [
               "Clear-Clear-Clear Consistency Drill",
               "Overhead Stroke Footwork Combo",
+            ],
+          },
+          {
+            heading: "Backhand Development",
+            drills: [
+              "Backhand Grip Switch Drill",
+              "Backhand Clear 10-in-a-Row",
+              "Backhand Overhead from Rear Corner",
             ],
           },
         ],
@@ -279,6 +415,14 @@ const LEVELS: Level[] = [
               "Attack the Flick Serve",
             ],
           },
+          {
+            heading: "Serve Under Pressure",
+            drills: [
+              "Serve at Deuce (simulate pressure)",
+              "Serve & Third Shot Pattern",
+              "Mixed Serve Sequence (vary each rep)",
+            ],
+          },
         ],
       },
       {
@@ -303,6 +447,14 @@ const LEVELS: Level[] = [
               "Spinnet vs Flat Net Shot Decision",
             ],
           },
+          {
+            heading: "Net Attack Combinations",
+            drills: [
+              "Net Kill then Cover",
+              "Lift-and-Intercept Pattern",
+              "Half-Court Net vs Rear Game",
+            ],
+          },
         ],
       },
       {
@@ -324,6 +476,78 @@ const LEVELS: Level[] = [
             drills: [
               "Conditioned Game: Smash Only",
               "Singles Match Play (score to 15)",
+            ],
+          },
+          {
+            heading: "Pattern Pressure",
+            drills: [
+              "5-Shot Pattern at Increased Speed",
+              "Coach Disrupts Pattern — Respond",
+              "Pattern from Both Sides of Court",
+            ],
+          },
+        ],
+      },
+      {
+        id: 7,
+        title: "Drive & Fast Exchanges",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-train-to-train/",
+        sections: [
+          {
+            heading: "Drive Technique",
+            drills: [
+              "Forehand Drive — Flat & Fast",
+              "Backhand Drive Mechanics",
+              "Drive Exchange Drill (side-to-side)",
+              "Mid-Court Drive Battle",
+            ],
+          },
+          {
+            heading: "Speed Training",
+            drills: [
+              "Multi-Shuttle Speed Feed",
+              "Drive-Kill Combination",
+              "Fast Exchange — 30 Seconds On",
+            ],
+          },
+          {
+            heading: "Reaction Work",
+            drills: [
+              "Block & Counter the Drive",
+              "Drive or Lift Decision Drill",
+              "Random Feed — Drive or Drop Response",
+            ],
+          },
+        ],
+      },
+      {
+        id: 8,
+        title: "Match Tactics Introduction",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-train-to-train/",
+        sections: [
+          {
+            heading: "Basic Strategy",
+            drills: [
+              "Attack from Rear, Defend from Mid",
+              "Using the Full Court Width",
+              "Exploit Backhand Corner Consistently",
+              "Win the Net — Dominate the Game",
+            ],
+          },
+          {
+            heading: "Tactical Games",
+            drills: [
+              "Zone-Restricted Match (coach sets rules)",
+              "No-Lift Game (forces attacking play)",
+              "Score from 10-10 — Pressure Points",
+            ],
+          },
+          {
+            heading: "Level 2 Assessment",
+            drills: [
+              "Smash Accuracy: 8 of 10 in Zone",
+              "Low Serve Consistency: 8 of 10",
+              "Coach Review & Level 3 Goal Setting",
             ],
           },
         ],
@@ -362,6 +586,14 @@ const LEVELS: Level[] = [
               "Court Coverage Speed Test",
             ],
           },
+          {
+            heading: "Match-Speed Footwork",
+            drills: [
+              "Ghost Drill at Match Intensity",
+              "20-Shot Footwork Sequence",
+              "Recovery Sprint — Baseline to Net",
+            ],
+          },
         ],
       },
       {
@@ -384,6 +616,14 @@ const LEVELS: Level[] = [
               "Drop to Corner — 20 in a Row",
               "Drop & Follow to Net",
               "Drop Shot Under Pressure Drill",
+            ],
+          },
+          {
+            heading: "Drop as a Weapon",
+            drills: [
+              "Clear-Clear-Drop Pattern",
+              "Drop to Weak Side Repeatedly",
+              "Force the Lift with Drop Shot",
             ],
           },
         ],
@@ -410,6 +650,14 @@ const LEVELS: Level[] = [
               "Smash to Wide Forehand Side",
             ],
           },
+          {
+            heading: "Jump Smash Development",
+            drills: [
+              "Jump Smash Approach Steps",
+              "Jump Smash Landing & Recovery",
+              "Jump Smash Repetition: 15 Reps",
+            ],
+          },
         ],
       },
       {
@@ -431,6 +679,14 @@ const LEVELS: Level[] = [
             drills: [
               "Drive-Kill Combination",
               "Front Court Pressure Drill",
+            ],
+          },
+          {
+            heading: "Deception at the Net",
+            drills: [
+              "Fake Push — Real Lift",
+              "Crossnet Disguise Drill",
+              "Net Tumble vs Flat Shot Decision",
             ],
           },
         ],
@@ -457,6 +713,14 @@ const LEVELS: Level[] = [
               "Defense into Counter-Attack",
             ],
           },
+          {
+            heading: "Defensive Patterns",
+            drills: [
+              "Block-Lift-Counter Sequence",
+              "Defend 10 Smashes in a Row",
+              "Switch from Defense to Attack",
+            ],
+          },
         ],
       },
       {
@@ -478,6 +742,77 @@ const LEVELS: Level[] = [
             drills: [
               "Exploit Opponent Weaknesses",
               "Score-Based Pressure Drill",
+            ],
+          },
+          {
+            heading: "Game Planning",
+            drills: [
+              "Build a Pre-Match Routine",
+              "Serve Pattern vs Right-Handed Opponent",
+              "Serve Pattern vs Left-Handed Opponent",
+            ],
+          },
+        ],
+      },
+      {
+        id: 7,
+        title: "Fitness & Conditioning",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-train-to-compete/",
+        sections: [
+          {
+            heading: "On-Court Conditioning",
+            drills: [
+              "20-Shot Multi-Shuttle Conditioning",
+              "Baseline-to-Net Sprint x10",
+              "Side-to-Side Touchlines x10",
+              "3-Corner Repeat Sprint Drill",
+            ],
+          },
+          {
+            heading: "Match Fitness",
+            drills: [
+              "Continuous Shadow Badminton 3 min",
+              "Match-Length Simulation Rally",
+              "Work-Rest Ratio Training",
+            ],
+          },
+          {
+            heading: "Strength for Badminton",
+            drills: [
+              "Lunge Series (court specific)",
+              "Wrist & Forearm Strength Circuit",
+              "Jump Training for Smash Power",
+            ],
+          },
+        ],
+      },
+      {
+        id: 8,
+        title: "Full Match Competition",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-train-to-compete/",
+        sections: [
+          {
+            heading: "Tournament Format",
+            drills: [
+              "Round-Robin Singles Tournament",
+              "Best of 3 Games Match Play",
+              "Doubles Rotation Format",
+            ],
+          },
+          {
+            heading: "In-Match Strategy",
+            drills: [
+              "Adjust Tactics Between Games",
+              "Exploit Score Momentum (12+ point runs)",
+              "Win the First Point of Each Game",
+            ],
+          },
+          {
+            heading: "Level 3 Assessment",
+            drills: [
+              "Jump Smash Accuracy Test",
+              "Drop Shot to Corner: 8 of 10",
+              "Coach Debrief & Level 4 Goals",
             ],
           },
         ],
@@ -515,6 +850,14 @@ const LEVELS: Level[] = [
               "Multi-Shuttle Pressure Drill (speed)",
             ],
           },
+          {
+            heading: "Advanced Wrist Control",
+            drills: [
+              "Slice Clear Disguised as Drop",
+              "Reverse Slice Net Shot",
+              "Wrist-Only Drill for Touch Shots",
+            ],
+          },
         ],
       },
       {
@@ -537,6 +880,14 @@ const LEVELS: Level[] = [
               "Serve & Attack Pattern — Singles",
               "Clear to Rearcourt & Follow",
               "Dominating with the Drop Shot in Singles",
+            ],
+          },
+          {
+            heading: "High-Level Singles",
+            drills: [
+              "Control the T-Position",
+              "Force Backhand Corner Every Rally",
+              "Build Points Through Patience",
             ],
           },
         ],
@@ -563,6 +914,14 @@ const LEVELS: Level[] = [
               "Communication & Calling Shots",
             ],
           },
+          {
+            heading: "Mixed Doubles Principles",
+            drills: [
+              "Front-Back Role Responsibilities",
+              "Switch Formation Under Attack",
+              "Net Domination as Front Player",
+            ],
+          },
         ],
       },
       {
@@ -584,6 +943,14 @@ const LEVELS: Level[] = [
             drills: [
               "Video Review: Spot the Patterns",
               "Ghost Drill — React to Caller",
+            ],
+          },
+          {
+            heading: "Deception Recognition",
+            drills: [
+              "Identify Fake vs Real Shot",
+              "Early Cue Reading Drill",
+              "Feeder Deception — Respond Correctly",
             ],
           },
         ],
@@ -609,6 +976,14 @@ const LEVELS: Level[] = [
               "High-Pressure Rally Drill",
             ],
           },
+          {
+            heading: "Pressure Simulation",
+            drills: [
+              "Play Every Point Like It's 19-19",
+              "Lose First Game — Win Match Simulation",
+              "Handling Umpire Calls & Staying Composed",
+            ],
+          },
         ],
       },
       {
@@ -630,6 +1005,78 @@ const LEVELS: Level[] = [
             drills: [
               "Physical Periodization Overview",
               "Technical Goals for the Season",
+            ],
+          },
+          {
+            heading: "Tournament Routine",
+            drills: [
+              "Morning-of-Tournament Checklist",
+              "Between-Match Recovery Protocol",
+              "Match Journaling & Self-Coaching",
+            ],
+          },
+        ],
+      },
+      {
+        id: 7,
+        title: "Mental Performance",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-train-to-win/",
+        sections: [
+          {
+            heading: "Pre-Match Mental Prep",
+            drills: [
+              "Build a Pre-Match Visualization Script",
+              "Confidence Cue Words (personalized)",
+              "Activation Level Adjustment (calm vs pump up)",
+              "Opponent-Neutral Mindset Practice",
+            ],
+          },
+          {
+            heading: "In-Match Mental Skills",
+            drills: [
+              "Between-Point Reset Routine",
+              "Error Flush — Move On Drill",
+              "Stay in the Process (not the score)",
+            ],
+          },
+          {
+            heading: "Post-Match Review",
+            drills: [
+              "3 Things I Did Well",
+              "1 Tactical Adjustment for Next Match",
+              "Physical & Mental Recovery Routine",
+            ],
+          },
+        ],
+      },
+      {
+        id: 8,
+        title: "Elite Training Methods",
+        url: "https://eabadminton.com/ea-junior-badminton-instructional-curriculum-train-to-win/",
+        sections: [
+          {
+            heading: "High-Performance Training",
+            drills: [
+              "Elite Warm-Up Protocol (active, sport-specific)",
+              "Full-Court Multi-Shuttle Conditioning",
+              "Plyometric Training for Court Speed",
+              "Strength-to-Power Transfer Drills",
+            ],
+          },
+          {
+            heading: "Advanced Skill Refinement",
+            drills: [
+              "Video Analysis Session (self-review)",
+              "High-Repetition Technical Drilling (100 reps)",
+              "Pressure Feed at Elite Pace",
+            ],
+          },
+          {
+            heading: "Level 4 Graduation",
+            drills: [
+              "Full Match vs Coach/Senior Player",
+              "Skills Assessment: All 4 Level Benchmarks",
+              "Goal Setting for Competitive Season",
             ],
           },
         ],
@@ -691,6 +1138,8 @@ export const DRILL_VIDEOS: Record<string, string> = {
     "https://www.youtube.com/watch?v=O4X0LL7t2ys",
   "Forehand Overhead Clear Mechanics":
     "https://www.youtube.com/watch?v=S2brZPqx288",
+  "Forehand Drive — Flat & Fast":
+    "https://www.youtube.com/watch?v=HJe2bFqv0GY",
 
   // ── TRAIN TO COMPETE ──
   "7 Advanced Tips for Faster Footwork":
@@ -709,6 +1158,10 @@ export const DRILL_VIDEOS: Record<string, string> = {
     "https://www.youtube.com/watch?v=IJg_1U_rFuo",
   "5 Drills to Hit the Perfect Drop Shot":
     "https://www.youtube.com/watch?v=dkX1aGk8Tow",
+  "Jump Smash Footwork & Timing":
+    "https://www.youtube.com/watch?v=5x3QnB5WB3E",
+  "Block Return of Smash":
+    "https://www.youtube.com/watch?v=OORHVgr3Os4",
 
   // ── TRAIN TO WIN ──
   "7 Advanced Tips for Badminton Mastery":
@@ -725,4 +1178,8 @@ export const DRILL_VIDEOS: Record<string, string> = {
     "https://www.youtube.com/watch?v=x0gfglQ2b38",
   "How to Read the Game in Badminton":
     "https://www.youtube.com/watch?v=rCUhSdtRZF8",
+  "Dominating with the Drop Shot in Singles":
+    "https://www.youtube.com/watch?v=CC0FGFSarhQ",
+  "Deception & Slice Technique":
+    "https://www.youtube.com/watch?v=UZ5PkZLHiEI",
 };

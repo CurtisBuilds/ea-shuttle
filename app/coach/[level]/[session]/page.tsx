@@ -51,7 +51,7 @@ export default function SessionPage({ params }: { params: { level: string; sessi
 
   const accent = levelColors[level.id] ?? "#0092DB";
   const prevSession = sessionId > 1 ? getSession(params.level, sessionId - 1) : null;
-  const nextSession = sessionId < 6 ? getSession(params.level, sessionId + 1) : null;
+  const nextSession = sessionId < 8 ? getSession(params.level, sessionId + 1) : null;
 
   const totalDrills = session.sections.reduce((n, s) => n + s.drills.length, 0);
 

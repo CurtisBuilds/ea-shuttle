@@ -51,7 +51,7 @@ export default function CoachNav({ name, isAdmin, currentLevel, currentSession }
     <nav style={nav}>
       <a href="/coach" style={brand}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/bball-logo.svg" alt="EA Shuttle" style={{ height: 36, width: "auto" }} />
+        <img src="/bdmtn-logo.svg" alt="EA Shuttle" style={{ height: 36, width: "auto" }} />
       </a>
       {currentLevel && (
         <span style={crumb}>
