@@ -85,10 +85,10 @@ export default function CoachHomePage() {
         })}
       </div>
 
-      <div style={{ marginTop: "var(--space-6)", padding: "var(--space-4) var(--space-5)", background: "var(--ea-white)", borderRadius: "var(--radius-button)", boxShadow: "var(--shadow-card)" }}>
+      <div style={{ marginTop: "var(--space-6)", padding: "var(--space-4) var(--space-5)", background: "var(--ea-white)", borderRadius: "var(--radius-button)", boxShadow: "var(--shadow-card)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--space-4)" }}>
         <div style={{ fontSize: "var(--fs-body-sm)", color: "var(--ea-slate)" }}>
-          Curriculum sourced from{" "}
-          <a href="https://eabadminton.com/ea-junior-badminton-instructional-curriculum/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--ea-link)" }}>
+          Ready to register? Find programs at{" "}
+          <a href="https://eabadminton.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--ea-link)" }}>
             eabadminton.com ↗
           </a>
         </div>
