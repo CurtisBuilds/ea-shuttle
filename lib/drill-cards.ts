@@ -4621,4 +4621,90 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
     successCriteria: "Player returns 14 of 15 shuttles into court AND hits 11 of 15 called target zones in Set 1, sustained across both Sets 1 and 2.",
   },
 
+  // ─── ADDITIONAL DRILLS (repurposed videos) ────────────────────────────────
+
+  "Beginner Coaching Overview": {
+    purpose: "Give brand-new players a broad introduction to badminton technique, court rules, and the basic shots they will practise in the coming sessions.",
+    setup: "No shuttle needed for the overview portion. Court or gym space. Players seated or standing in a semicircle facing the coach.",
+    howToRun: [
+      "Coach demonstrates the 5 core shots: clear, drop, smash, net shot, serve. 30 seconds each with a volunteer.",
+      "Explain the scoring system (rally point to 21) and basic service rules in 2 minutes.",
+      "Players shadow each shot type once — coach calls the shot name and demonstrates simultaneously. 5 rounds.",
+      "Q&A: players ask anything about what they just saw. Coach answers in plain language.",
+      "Finish: each player picks their one most interesting shot — they will try it first in the next drill.",
+    ],
+    coachingCues: [
+      "Watch the racket face — it tells you where the shuttle will go.",
+      "Every shot starts from the ready position.",
+      "Badminton is about control first, power second.",
+      "Ask questions — there are no silly ones here.",
+    ],
+    commonErrors: [
+      { error: "Players overwhelmed by too much information at once", fix: "Limit to 3 shots for very young beginners (clear, serve, net shot)." },
+      { error: "No engagement during Q&A (no questions asked)", fix: "Prompt with 'What looked hardest? What looked easiest?' to spark responses." },
+    ],
+    progression: {
+      easier: "Reduce to 3 core shots; use visuals or video clips instead of live demos.",
+      standard: "Full 5-shot overview as described.",
+      harder: "After the overview, players predict which shot they'll need in a 3-shot rally scenario — builds tactical thinking from day one.",
+    },
+    successCriteria: "Every player can name all 5 basic shots and perform a shadow swing for at least 3 of them by the end of the session.",
+  },
+
+  "Low Serve Return Deception & Tricks": {
+    purpose: "Expand the serve return toolkit beyond the basic push and lift by adding deceptive and trick return options that keep the server guessing.",
+    setup: "Server at service line. Receiver at the opposite service line. Work through 4 return options systematically.",
+    howToRun: [
+      "Return 1 — Standard push to T: tight, low return down the centre. 5 reps.",
+      "Return 2 — Flick return: receiver mimics a push but flicks upward at the last moment to lift high over the server. 5 reps.",
+      "Return 3 — Cross-court push: push wide to the opposite side from the serve direction. 5 reps.",
+      "Return 4 — Rush net shot: receiver steps in aggressively and pushes steeply down before the server can react. 5 reps.",
+      "Mixed set: server does not know which return is coming. Receiver picks freely. 10 reps.",
+      "Score: server earns a point for reading the return before contact. Receiver earns a point for surprising the server.",
+    ],
+    coachingCues: [
+      "Same setup for every return — the deception is in the last moment.",
+      "The flick return catches servers who lean forward too early.",
+      "Step in on the rush — close the gap before the server is ready.",
+      "Never use the same return twice in a row.",
+    ],
+    commonErrors: [
+      { error: "Deceptive returns telegraphed by different body angles", fix: "Same foot position and lean for all returns — vary only the wrist at contact." },
+      { error: "Flick return too short (server can attack)", fix: "Flick must clear the server's reach height and land past the service line." },
+    ],
+    progression: {
+      easier: "2 returns only (push + flick). No mixed set.",
+      standard: "All 4 returns + mixed set as described.",
+      harder: "Server moves immediately on backswing — receiver must read server movement and pick the return that exploits it.",
+    },
+    successCriteria: "Receiver surprises the server (server cannot read in advance) on 7 of 10 mixed-set returns.",
+  },
+
+  "Fixing Doubles Rotation Mistakes": {
+    purpose: "Identify and correct the most common doubles rotation errors that give away the attack or leave the court open.",
+    setup: "Two pairs on a full doubles court. Coach observes and pauses play on errors. Focus on front-back to side-by-side transitions.",
+    howToRun: [
+      "Phase 1 — Identify mistakes: play a 5-minute doubles rally. Coach pauses whenever a rotation error occurs and names it.",
+      "Common errors to watch: (1) both players going to the same side, (2) rear player rushing to the net too early, (3) front player retreating when not needed, (4) no verbal call before a switch.",
+      "Phase 2 — Drill the fix: run the specific rotation that caused the error 5 times slowly, then 5 times at match pace.",
+      "Phase 3 — Live application: play 5 more minutes. Coach counts error recurrences. Target: fewer than Phase 1 baseline.",
+    ],
+    coachingCues: [
+      "Call 'mine!' or 'yours!' on every ambiguous shuttle — no silent rotations.",
+      "Rear player: stay back until the attack is truly broken.",
+      "Front player: your job is the net — don't drift back unless your partner calls 'back!'.",
+      "A clean rotation is invisible — opponents shouldn't see it happening.",
+    ],
+    commonErrors: [
+      { error: "Both players moving to the same side (leaving one side open)", fix: "Designate sides on every switch: say 'I go left, you go right' out loud." },
+      { error: "Rear player rushing to the net after a drive (wrong moment)", fix: "Rear player only moves forward when the opponent is clearly hitting up." },
+    ],
+    progression: {
+      easier: "Shadow rotations only (no shuttle) — walk through each transition slowly.",
+      standard: "Live play with coach pauses as described.",
+      harder: "No pauses — play continuously and self-correct in real time. Coach tallies errors only; players identify and fix independently.",
+    },
+    successCriteria: "The pair reduces their rotation error count by at least 50% from Phase 1 to Phase 3.",
+  },
+
 };

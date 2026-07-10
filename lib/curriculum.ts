@@ -109,6 +109,7 @@ const LEVELS: Level[] = [
             drills: [
               "Beginners Footwork, Drills & Tips",
               "Beginners Badminton Coaching Tips & Tricks",
+              "Beginner Coaching Overview",
               "Hand-Eye Coordination Feeder Drill",
               "Toss & Hit Introduction",
             ],
@@ -416,6 +417,7 @@ const LEVELS: Level[] = [
               "Return Low Serve — Push",
               "Return Low Serve — Lift",
               "Attack the Flick Serve",
+              "Low Serve Return Deception & Tricks",
             ],
           },
           {
@@ -907,6 +909,7 @@ const LEVELS: Level[] = [
               "Front-Back Attacking Formation",
               "Side-by-Side Defensive System",
               "Rotation Patterns in Doubles",
+              "Fixing Doubles Rotation Mistakes",
             ],
           },
           {
@@ -1505,6 +1508,8 @@ export const DRILL_VIDEOS: Record<string, string> = {
   "Beginners Footwork, Drills & Tips":
     "https://www.youtube.com/watch?v=sDXWaMsYJck",
   "Beginners Badminton Coaching Tips & Tricks":
+    "https://www.youtube.com/watch?v=1Y3JBAq2jQw",
+  "Beginner Coaching Overview":
     "https://www.youtube.com/watch?v=kpHzIzSMF1s",
   "Underhand Forehand Lift":
     "https://www.youtube.com/watch?v=in24YZmG9ys",
@@ -1521,7 +1526,7 @@ export const DRILL_VIDEOS: Record<string, string> = {
   "Serve & Return Rally":
     "https://www.youtube.com/watch?v=_N13YfFsNJM",
   "Return to Baseline Lift":
-    "https://www.youtube.com/watch?v=cqkPgW_BsVw",
+    "https://www.youtube.com/watch?v=yRLtypZzJ1E",
   "Short Return to Net":
     "https://www.youtube.com/watch?v=kLCCdLv_6Eo",
 
@@ -1543,7 +1548,7 @@ export const DRILL_VIDEOS: Record<string, string> = {
   "Who Covers What? Positioning Overview":
     "https://www.youtube.com/watch?v=W_mgrR9VNwo",
   "Side-by-Side Starting Formation":
-    "https://www.youtube.com/watch?v=Dw1twWmIJdw",
+    "https://www.youtube.com/watch?v=01YZbJzgXSA",
   "Rotation After Serve Practice":
     "https://www.youtube.com/watch?v=iXxVLRg6DYQ",
 
@@ -1604,6 +1609,8 @@ export const DRILL_VIDEOS: Record<string, string> = {
     "https://www.youtube.com/watch?v=7YqowmDwA60",
   "Attack the Flick Serve":
     "https://www.youtube.com/watch?v=wbjlCuBK6mo",
+  "Low Serve Return Deception & Tricks":
+    "https://www.youtube.com/watch?v=cqkPgW_BsVw",
 
   // ── TRAIN TO TRAIN — Session 5: Net Play Skills ──
   "Net Kill Technique":
@@ -1796,6 +1803,8 @@ export const DRILL_VIDEOS: Record<string, string> = {
     "https://www.youtube.com/watch?v=701uhoUY5fY",
   "Rotation Patterns in Doubles":
     "https://www.youtube.com/watch?v=iXxVLRg6DYQ",
+  "Fixing Doubles Rotation Mistakes":
+    "https://www.youtube.com/watch?v=Dw1twWmIJdw",
   "2v1 Attack Drill":
     "https://www.youtube.com/watch?v=Wi5j8PCjpzY",
   "Serve & Net Rush Pattern":
