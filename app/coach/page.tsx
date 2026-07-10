@@ -20,7 +20,7 @@ export default function CoachHomePage() {
           letterSpacing: "var(--ls-display)", lineHeight: "var(--lh-display)",
           marginBottom: "var(--space-2)",
         }}>
-          Junior Shuttle Curriculum
+          Jr EA Badminton
         </h1>
         <p style={{ color: "var(--ea-slate)", fontSize: "var(--fs-body-sm)" }}>
           4 levels · 8 sessions each · Tap a level to get started
