@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
-import { getLevel, getSession, DRILL_VIDEOS, DRILL_DESCRIPTIONS } from "@/lib/curriculum";
+import { getLevel, getSession, DRILL_VIDEOS, DRILL_DESCRIPTIONS, DRILL_CARDS } from "@/lib/curriculum";
+import type { DrillCard } from "@/lib/curriculum";
 import Link from "next/link";
 
 const levelColors: Record<string, string> = {
@@ -175,57 +176,200 @@ export default function SessionPage({ params }: { params: { level: string; sessi
                 {section.drills.map((drill, j) => {
                   const drillName = cleanDrillName(drill);
                   const videoUrl = DRILL_VIDEOS[drillName];
-                  const description = !videoUrl ? DRILL_DESCRIPTIONS[drillName] : undefined;
+                  const description = DRILL_DESCRIPTIONS[drillName];
+                  const card: DrillCard | undefined = DRILL_CARDS[drillName];
                   return (
                     <div key={j} style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: "var(--space-3)",
-                      padding: "var(--space-2) 0",
+                      padding: "var(--space-3) 0",
                       borderBottom: j < section.drills.length - 1 ? "1px solid var(--ea-line)" : "none",
                     }}>
-                      <div style={{
-                        width: 24, height: 24, borderRadius: "50%",
-                        background: `${accent}22`,
-                        color: accent, fontSize: 12, fontWeight: "var(--fw-bold)",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        flexShrink: 0, marginTop: description ? 2 : 0,
-                      }}>
-                        {j + 1}
-                      </div>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <span style={{ fontSize: "var(--fs-body-sm)", color: "var(--ea-ink)", lineHeight: 1.5 }}>
-                          {drillName}
-                        </span>
-                        {description && (
-                          <div style={{
-                            fontSize: 12, color: "var(--ea-slate)",
-                            lineHeight: 1.5, marginTop: 2,
-                            fontStyle: "italic",
+                      {/* Drill title row */}
+                      <div style={{ display: "flex", alignItems: "flex-start", gap: "var(--space-3)" }}>
+                        <div style={{
+                          width: 24, height: 24, borderRadius: "50%",
+                          background: `${accent}22`,
+                          color: accent, fontSize: 12, fontWeight: "var(--fw-bold)",
+                          display: "flex", alignItems: "center", justifyContent: "center",
+                          flexShrink: 0, marginTop: 2,
+                        }}>
+                          {j + 1}
+                        </div>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <span style={{
+                            fontSize: "var(--fs-body-sm)", color: "var(--ea-ink)",
+                            lineHeight: 1.5, fontWeight: card ? "var(--fw-semibold)" : "var(--fw-normal)",
                           }}>
-                            {description}
-                          </div>
+                            {drillName}
+                          </span>
+                        </div>
+                        {videoUrl && (
+                          <a
+                            href={videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Watch on YouTube"
+                            style={{
+                              display: "inline-flex", alignItems: "center", gap: 4,
+                              padding: "4px 10px", borderRadius: 6,
+                              background: "#FF0000", color: "#fff",
+                              fontSize: 11, fontWeight: "var(--fw-bold)",
+                              textDecoration: "none", flexShrink: 0,
+                              fontFamily: "var(--font-body)",
+                              letterSpacing: "0.03em",
+                            }}
+                          >
+                            ▶ YouTube
+                          </a>
                         )}
                       </div>
-                      {videoUrl && (
-                        <a
-                          href={videoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="Watch on YouTube"
-                          style={{
-                            display: "inline-flex", alignItems: "center", gap: 4,
-                            padding: "4px 10px", borderRadius: 6,
-                            background: "#FF0000", color: "#fff",
-                            fontSize: 11, fontWeight: "var(--fw-bold)",
-                            textDecoration: "none", flexShrink: 0,
-                            fontFamily: "var(--font-body)",
-                            letterSpacing: "0.03em",
-                            marginTop: 2,
-                          }}
-                        >
-                          ▶ YouTube
-                        </a>
+
+                      {/* DrillCard — expanded coach info */}
+                      {card && (
+                        <div style={{
+                          marginTop: "var(--space-3)",
+                          marginLeft: 36,
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "var(--space-3)",
+                        }}>
+                          {/* Purpose */}
+                          <div style={{
+                            padding: "var(--space-2) var(--space-3)",
+                            background: `${accent}12`,
+                            borderLeft: `3px solid ${accent}`,
+                            borderRadius: "0 var(--radius-badge) var(--radius-badge) 0",
+                            fontSize: 13, color: "var(--ea-ink)", lineHeight: 1.5,
+                          }}>
+                            <strong style={{ color: accent }}>Purpose: </strong>{card.purpose}
+                          </div>
+
+                          {/* Setup */}
+                          <div style={{ fontSize: 13, color: "var(--ea-slate)", lineHeight: 1.5 }}>
+                            <strong style={{ color: "var(--ea-navy)" }}>Setup: </strong>{card.setup}
+                          </div>
+
+                          {/* How to Run */}
+                          <div>
+                            <div style={{
+                              fontSize: 12, fontWeight: "var(--fw-bold)", color: "var(--ea-navy)",
+                              textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6,
+                            }}>
+                              How to Run
+                            </div>
+                            <ol style={{ margin: 0, paddingLeft: 18, display: "flex", flexDirection: "column", gap: 4 }}>
+                              {card.howToRun.map((step, k) => (
+                                <li key={k} style={{ fontSize: 13, color: "var(--ea-ink)", lineHeight: 1.5 }}>
+                                  {step}
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+
+                          {/* Coaching Cues */}
+                          <div>
+                            <div style={{
+                              fontSize: 12, fontWeight: "var(--fw-bold)", color: "var(--ea-navy)",
+                              textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6,
+                            }}>
+                              Coaching Cues
+                            </div>
+                            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                              {card.coachingCues.map((cue, k) => (
+                                <span key={k} style={{
+                                  padding: "3px 10px", borderRadius: 20,
+                                  background: `${accent}18`, color: accent,
+                                  fontSize: 12, lineHeight: 1.4,
+                                  fontStyle: "italic",
+                                }}>
+                                  "{cue}"
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Common Errors */}
+                          {card.commonErrors.length > 0 && (
+                            <div>
+                              <div style={{
+                                fontSize: 12, fontWeight: "var(--fw-bold)", color: "var(--ea-navy)",
+                                textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6,
+                              }}>
+                                Common Errors & Fixes
+                              </div>
+                              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                                {card.commonErrors.map((item, k) => (
+                                  <div key={k} style={{
+                                    display: "grid", gridTemplateColumns: "1fr 1fr",
+                                    gap: 8, fontSize: 12, lineHeight: 1.4,
+                                  }}>
+                                    <div style={{
+                                      padding: "6px 10px", background: "#FFF3E0",
+                                      borderRadius: "var(--radius-badge)", color: "#BF360C",
+                                    }}>
+                                      ✗ {item.error}
+                                    </div>
+                                    <div style={{
+                                      padding: "6px 10px", background: "#E8F5E9",
+                                      borderRadius: "var(--radius-badge)", color: "#1B5E20",
+                                    }}>
+                                      ✓ {item.fix}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Progression */}
+                          <div>
+                            <div style={{
+                              fontSize: 12, fontWeight: "var(--fw-bold)", color: "var(--ea-navy)",
+                              textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 6,
+                            }}>
+                              Progression
+                            </div>
+                            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 6 }}>
+                              {[
+                                { label: "Easier", value: card.progression.easier, bg: "#E8F5E9", color: "#2E7D32" },
+                                { label: "Standard", value: card.progression.standard, bg: `${accent}15`, color: accent },
+                                { label: "Harder", value: card.progression.harder, bg: "#FFF3E0", color: "#E65100" },
+                              ].map(({ label, value, bg, color }) => (
+                                <div key={label} style={{
+                                  padding: "8px 10px", background: bg,
+                                  borderRadius: "var(--radius-badge)",
+                                }}>
+                                  <div style={{ fontSize: 10, fontWeight: "var(--fw-bold)", color, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 3 }}>
+                                    {label}
+                                  </div>
+                                  <div style={{ fontSize: 12, color: "var(--ea-ink)", lineHeight: 1.4 }}>
+                                    {value}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Success Criteria */}
+                          <div style={{
+                            padding: "var(--space-2) var(--space-3)",
+                            background: "#E8F5E9",
+                            borderRadius: "var(--radius-badge)",
+                            fontSize: 13, color: "#1B5E20", lineHeight: 1.5,
+                          }}>
+                            <strong>✓ Success: </strong>{card.successCriteria}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Plain description fallback (DRILL_DESCRIPTIONS only, no card) */}
+                      {!card && description && (
+                        <div style={{
+                          marginTop: 4, marginLeft: 36,
+                          fontSize: 12, color: "var(--ea-slate)",
+                          lineHeight: 1.5, fontStyle: "italic",
+                        }}>
+                          {description}
+                        </div>
                       )}
                     </div>
                   );

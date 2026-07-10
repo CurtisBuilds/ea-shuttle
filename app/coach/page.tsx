@@ -23,7 +23,7 @@ export default function CoachHomePage() {
           Junior Shuttle Curriculum
         </h1>
         <p style={{ color: "var(--ea-slate)", fontSize: "var(--fs-body-sm)" }}>
-          4 levels · 6 sessions each · Tap a level to get started
+          4 levels · 8 sessions each · Tap a level to get started
         </p>
       </div>
 

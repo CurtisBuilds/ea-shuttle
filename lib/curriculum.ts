@@ -2,6 +2,9 @@
 // 4 Levels × 8 Sessions each
 // Videos sourced from eabadminton.com + curated YouTube content
 
+export type { DrillCard } from "./drill-cards";
+export { DRILL_CARDS } from "./drill-cards";
+
 export type Section = {
   heading: string;
   drills: string[];
